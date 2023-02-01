@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+<insertfile>_inc/summary.txt</insertfile>
+-->
+
+<modification>
+    <name>#ocmod.space: <insertvar>MODCODE</insertvar></name>
+    <code><insertvar>MODFILE</insertvar></code>
+    <version><insertvar>MODVERS</insertvar></version>
+    <author><insertvar>AUTHOR</insertvar></author>
+    <link><insertvar>XMLLINK</insertvar></link>
+
+    <file path="catalog/controller/product/{category,manufacturer,search,special}.php" error="log">
+        <operation error="log">
+            <search><![CDATA[$sort = 'p.sort_order';]]></search>
+            <add position="replace"><![CDATA[$sort = 'p.date_added';]]></add>
+        </operation>
+
+        <operation error="log">
+            <search><![CDATA[p.sort_order-ASC]]></search>
+            <add position="replace"><![CDATA[p.date_added-DESC]]></add>
+        </operation>
+
+        <operation error="log">
+            <search><![CDATA[p.sort_order&order=ASC]]></search>
+            <add position="replace"><![CDATA[p.date_added&order=DESC]]></add>
+        </operation>
+
+        <operation error="log">
+            <search><![CDATA[$order = 'ASC';]]></search>
+            <add position="replace"><![CDATA[$order = 'DESC';]]></add>
+        </operation>
+    </file>
+</modification>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+<insertfile>_inc/summary.txt</insertfile>
+-->
+
+<modification>
+    <name>#ocmod.space: <insertvar>MODCODE</insertvar></name>
+    <code><insertvar>MODFILE</insertvar></code>
+    <version><insertvar>MODVERS</insertvar></version>
+    <author><insertvar>AUTHOR</insertvar></author>
+    <link><insertvar>XMLLINK</insertvar></link>
+
+    <file path="catalog/controller/product/category.php" error="log">
+        <operation error="log">
+            <search><![CDATA['text'  => $this->language->get('text_model_asc'),]]></search>
+            <add position="before"><![CDATA[				'text'  => $this->language->get('text_date_added_desc'),
+				'value' => 'p.date_added-DESC',
+				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.date_added&order=DESC' . $url)
+			);
+
+			$data['sorts'][] = array(]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/manufacturer.php" error="log">
+        <operation error="log">
+            <search><![CDATA['text'  => $this->language->get('text_model_asc'),]]></search>
+            <add position="before"><![CDATA[				'text'  => $this->language->get('text_date_added_desc'),
+				'value' => 'p.date_added-DESC',
+				'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . '&sort=p.date_added&order=DESC' . $url)
+			);
+
+			$data['sorts'][] = array(]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/search.php" error="log">
+        <operation error="log">
+            <search><![CDATA['text'  => $this->language->get('text_model_asc'),]]></search>
+            <add position="before"><![CDATA[				'text'  => $this->language->get('text_date_added_desc'),
+				'value' => 'p.date_added-DESC',
+				'href'  => $this->url->link('product/search', 'sort=p.date_added&order=DESC' . $url)
+			);
+
+			$data['sorts'][] = array(]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/special.php" error="log">
+        <operation error="log">
+            <search><![CDATA['text'  => $this->language->get('text_model_asc'),]]></search>
+            <add position="before"><![CDATA[			'text'  => $this->language->get('text_date_added_desc'),
+			'value' => 'p.date_added-DESC',
+			'href'  => $this->url->link('product/special', 'sort=p.date_added&order=DESC' . $url)
+		);
+
+		$data['sorts'][] = array(]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/language/*/product/{category,manufacturer,search,special}.php" error="log">
+        <operation error="log">
+            <search><![CDATA[$_['text_model_asc']]]></search>
+            <add position="before"><![CDATA[$_['text_date_added_desc'] = 'Newest first';]]></add>
+        </operation>
+    </file>
+</modification>
