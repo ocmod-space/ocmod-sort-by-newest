@@ -17,7 +17,6 @@ There are two types of the extension to download:
 1. [sort-by-newest--default.ocmod.zip](../addons/default/zip/sort-by-newest--default.ocmod.zip) - use this sorting as *Default* sorting method.
 2. [sort-by-newest--additional.ocmod.zip](../addons/additional/zip/sort-by-newest--additional.ocmod.zip) - adds a new sorting method - *Newest first*.
 
-
 ## License
 Licensed under the [MIT License](https://raw.githubusercontent.com/ocmod-space/ocmod-sort-by-newest/main/LICENSE.txt)
 
