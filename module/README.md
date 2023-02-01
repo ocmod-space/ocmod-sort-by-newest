@@ -10,7 +10,7 @@ Compatible with OpenCart 3.x versions.
 * Does not change OC system files (OCMOD).
 
 ## Additional information
-Don't install the extension on the [b]Journal[/b] theme, just use embedded instruments:
+Don't install the extension on the **Journal** theme, just use embedded instruments:  
 ```Journal menu > Skins > Product Listing > Sort Bar > Product Sort```
 
 There are two types of the extension to download:
