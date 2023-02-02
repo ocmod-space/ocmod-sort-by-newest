@@ -7,7 +7,7 @@ Compatible with OpenCart 3.x versions.
 ## Features
 * Ability to show the newest products first.
 * Simple as pie!
-* Does not change OC system files (OCMOD).
+* Does not modify system files (OCMOD).
 
 ## Additional information
 Don't install the extension on the **Journal** theme, just use embedded instruments:  
